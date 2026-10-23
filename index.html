@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f2">
+  <meta name="description" content="Portfólio pessoal de Annaclara Souza Cunha, estudante do 9º ano.">
+  <title>Annaclara Souza Cunha | Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f5f7f2;
+      --ink: #17231f;
+      --muted: #56645e;
+      --blue: #2855d9;
+      --lime: #d7ed64;
+      --coral: #ed765f;
+      --line: #d5ddd4;
+      --sans: "DM Sans", "Segoe UI", sans-serif;
+      --serif: "Fraunces", Georgia, serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 var(--sans); }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
+    .skip-link { position: absolute; top: 8px; left: 8px; z-index: 5; padding: 8px 12px; transform: translateY(-150%); background: var(--lime); }
+    .skip-link:focus { transform: translateY(0); }
+    .header { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 7%; border-bottom: 1px solid var(--line); }
+    .logo { font-size: 14px; font-weight: 700; text-decoration: none; }
+    .logo span { color: var(--blue); }
+    nav { display: flex; gap: 28px; }
+    nav a { font-size: 13px; font-weight: 600; text-decoration: none; }
+    nav a:hover { color: var(--blue); }
+    .hero { width: min(1120px, 100%); min-height: 470px; margin: 0 auto; padding: 42px 7%; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(200px, .65fr); align-items: center; gap: 44px; overflow: hidden; background: radial-gradient(circle at 90% 15%, rgba(215, 237, 100, .28), transparent 27%), linear-gradient(115deg, #e5ebe3, var(--paper) 72%); color: var(--ink); }
+    .hero img { grid-column: 2; grid-row: 1; justify-self: end; width: min(100%, 206px); height: auto; aspect-ratio: 4 / 5; border-radius: 140px 140px 8px 8px; box-shadow: 12px 12px 0 var(--lime); object-fit: cover; object-position: center; }
+    .hero-content { grid-column: 1; grid-row: 1; width: auto; margin: 0; padding: 30px 0; }
+    .eyebrow, .label { margin: 0; color: var(--blue); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+    .hero .eyebrow { margin-bottom: 16px; color: var(--blue); }
+    h1 { max-width: 720px; margin: 0; font: 500 68px/1.04 var(--serif); }
+    .intro { max-width: 500px; margin: 22px 0 0; color: var(--muted); font-size: 18px; }
+    .social-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .social-link { display: inline-flex; min-height: 44px; align-items: center; gap: 7px; padding: 9px 9px; border: 1px solid var(--line); border-radius: 4px; background: rgba(255, 255, 255, .72); font-size: 12px; font-weight: 600; text-decoration: none; transition: background-color .18s ease, border-color .18s ease, color .18s ease; }
+    .social-link:hover { border-color: var(--blue); background: var(--blue); color: white; }
+    .social-platform { color: var(--blue); font-size: 10px; font-weight: 700; text-transform: uppercase; }
+    .social-link:hover .social-platform { color: var(--lime); }
+    .section { width: min(1120px, 100%); margin: 0 auto; padding: 92px 7%; }
+    .about { display: grid; grid-template-columns: .75fr 1.5fr; gap: 60px; border-bottom: 1px solid var(--line); }
+    h2 { margin: 0 0 22px; font: 500 42px/1.13 var(--serif); }
+    .about-copy p { max-width: 660px; margin: 0; color: var(--muted); font-size: 18px; line-height: 1.8; }
+    .about-copy strong { color: var(--ink); font-weight: 600; }
+    .courses { padding-top: 78px; padding-bottom: 96px; }
+    .courses-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 34px; }
+    .courses-heading h2 { margin: 10px 0 0; }
+    .count { display: grid; width: 52px; aspect-ratio: 1; place-items: center; border-radius: 50%; background: var(--coral); color: white; font-size: 13px; font-weight: 700; }
+    .course-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+    .course-list li { min-height: 76px; display: grid; grid-template-columns: 50px 1fr auto; align-items: center; gap: 18px; border-bottom: 1px solid var(--line); }
+    .number { color: var(--blue); font-size: 12px; font-weight: 700; }
+    .course-name { font-size: 18px; font-weight: 600; }
+    .hours { color: var(--muted); font-size: 13px; }
+    footer { min-height: 92px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 7%; background: var(--ink); color: var(--paper); font-size: 13px; }
+    footer p { margin: 0; }
+    footer span { color: var(--lime); }
+    @media (max-width: 700px) {
+      .header { min-height: 68px; padding-right: 6%; padding-left: 6%; }
+      nav { gap: 18px; }
+      nav a { font-size: 12px; }
+      .hero { min-height: 0; padding: 38px 6%; grid-template-columns: minmax(0, 1.15fr) minmax(150px, .85fr); gap: 24px; }
+      .hero img { grid-column: 2; grid-row: 1 / span 2; width: min(100%, 166px); }
+      .hero-content { display: contents; }
+      .hero .eyebrow { grid-column: 1; grid-row: 1; align-self: end; }
+      h1 { grid-column: 1; grid-row: 2; align-self: start; max-width: 460px; font-size: 48px; }
+      .intro { grid-column: 1 / -1; grid-row: 3; max-width: 500px; margin: 12px 0 0; font-size: 16px; }
+      .social-links { grid-column: 1 / -1; grid-row: 4; margin-top: 16px; }
+      .section { padding: 68px 6%; }
+      .about { grid-template-columns: 1fr; gap: 18px; }
+      h2 { font-size: 36px; }
+      .about-copy p { font-size: 16px; }
+      .courses { padding-top: 64px; padding-bottom: 76px; }
+      .course-list li { min-height: 72px; grid-template-columns: 34px 1fr auto; gap: 12px; }
+      .course-name { font-size: 15px; }
+      .hours { max-width: 82px; text-align: right; font-size: 12px; }
+      footer { padding-right: 6%; padding-left: 6%; }
+    }
+    @media (max-width: 420px) {
+      .header { align-items: flex-start; flex-direction: column; justify-content: center; gap: 4px; padding-top: 10px; padding-bottom: 10px; }
+      .hero { grid-template-columns: minmax(0, 1fr) 84px; gap: 12px; padding-top: 30px; padding-bottom: 30px; }
+      .hero img { width: min(100%, 84px); }
+      h1 { font-size: 32px; }
+      .course-list li { grid-template-columns: 28px 1fr; gap: 10px; padding: 12px 0; }
+      .hours { grid-column: 2; max-width: none; margin-top: -10px; text-align: left; }
+      footer { align-items: flex-start; flex-direction: column; justify-content: center; }
+    }
+    @media (max-width: 350px) {
+      .hero { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+      .hero img { grid-column: 1; grid-row: 1; justify-self: end; }
+      .hero .eyebrow { grid-column: 1; grid-row: 2; }
+      h1 { grid-column: 1; grid-row: 3; font-size: 32px; }
+      .intro { grid-column: 1; grid-row: 4; margin-top: 0; }
+      .social-links { grid-column: 1; grid-row: 5; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="header">
+    <a class="logo" href="#inicio" aria-label="Annaclara Souza Cunha, início">A<span>.</span>SC</a>
+    <nav aria-label="Navegação principal">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#cursos">Cursos</a>
+    </nav>
+  </header>
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+      <img src="img/WhatsApp%20Image%202026-10-20%20at%2009.11.31.jpeg" alt="Retrato de Annaclara Souza Cunha" fetchpriority="high">
+      <div class="hero-content">
+        <p class="eyebrow">Estudante · 9º ano</p>
+        <h1 id="titulo-principal">Annaclara<br>Souza Cunha</h1>
+        <p class="intro">15 anos, curiosa sobre o mundo e sempre pronta para aprender algo novo.</p>
+        <div class="social-links" aria-label="Redes sociais">
+          <a class="social-link" href="https://www.instagram.com/clara_20s/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Annaclara, @clara_20s, abre em nova aba"><span class="social-platform">Instagram</span><span>@clara_20s</span></a>
+          <a class="social-link" href="https://www.tiktok.com/@clara_souzaa20" target="_blank" rel="noopener noreferrer" aria-label="TikTok de Annaclara, @clara_souzaa20, abre em nova aba"><span class="social-platform">TikTok</span><span>@clara_souzaa20</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="section about" id="sobre" aria-labelledby="titulo-sobre">
+      <p class="label">01 / Sobre mim</p>
+      <div class="about-copy">
+        <h2 id="titulo-sobre">Aprender, observar, descobrir.</h2>
+        <p>Sou estudante do 9º ano e gosto de viajar com minha família. Me considero uma pessoa <strong>observadora e sincera</strong>. Estou em uma fase de aprendizado e descobertas, buscando crescer, adquirir conhecimentos e desenvolver novas habilidades.</p>
+      </div>
+    </section>
+    <section class="section courses" id="cursos" aria-labelledby="titulo-cursos">
+      <div class="courses-heading">
+        <div><p class="label">02 / Formação</p><h2 id="titulo-cursos">Cursos</h2></div>
+        <span class="count" aria-label="5 cursos">05</span>
+      </div>
+      <ul class="course-list">
+        <li><span class="number">01</span><span class="course-name">Operador de Microcomputador</span><span class="hours">160 horas</span></li>
+        <li><span class="number">02</span><span class="course-name">Power BI</span><span class="hours">32 horas</span></li>
+        <li><span class="number">03</span><span class="course-name">Implantação de Redes Locais</span><span class="hours">Curso</span></li>
+        <li><span class="number">04</span><span class="course-name">Excel com IA Generativa</span><span class="hours">Curso</span></li>
+        <li><span class="number">05</span><span class="course-name">Programação com IA Generativa</span><span class="hours">Curso</span></li>
+      </ul>
+    </section>
+  </main>
+  <footer><p>Annaclara Souza Cunha</p><p>Portfólio pessoal <span>·</span> 2026</p></footer>
+</body>
+</html>
